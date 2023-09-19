@@ -1,0 +1,837 @@
+/*
+Theme Name: AnimerV1
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    display: flex;
+    background-color:#0F6298;
+    padding: 0 30px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    display: flex;
+}
+
+nav h1 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.navbar {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.navbar ul {
+    width: 80%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar ul li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar ul li:hover {
+    background-color: #004879;
+    cursor: pointer;
+}
+
+.navbar ul li .sub-menu{
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    display: none;
+}
+
+.sub-menu .menu-item a{
+    color: white;
+    text-transform:none;
+}
+
+.sub-menu li {
+    position: relative;
+    padding: 10px;
+}
+
+.navbar ul li:hover .sub-menu {
+    background-color: #0F6298;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu .menu-item:hover {
+    background-color: #004879;
+}
+
+/* NAVBAR END */
+
+
+
+
+
+.container {
+    width: 100%;
+    min-height: calc(100vh - 173px);
+    background-color: #F6F8FC;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    height: 70vh;
+    object-position: center;
+    filter: brightness(80%);
+}
+
+.hero .judul{
+    bottom: 5%;
+    width: 35%;
+    font-size: 2rem;
+    position: absolute;
+    color: white;
+    text-align: end;
+    padding: 30px;
+    z-index: 10;
+}
+
+.judul h1{
+    font-size: 3rem;
+}
+
+
+
+
+
+/* ARTICLE PAGE */
+.page-articles {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.articles {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.articles a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.articles article:hover {
+    background-color: #ececec;
+}
+
+.articles article {
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.articles article h2{
+    padding:10px;
+}
+
+.articles article p {
+    padding: 0 10px 10px 10px;
+}
+
+
+
+.single-article {
+    padding: 20px;
+    height: 75vh;
+    background-color: #F6F8FC;
+}
+
+.single-article h2 {
+    padding: 10px;
+}
+
+.single-article article h2 {
+    padding: 5px;
+}
+
+.single-article article {
+    margin-top: 15px;
+    height: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.single-article article p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+
+/* LOGIN FORM */
+.admin-page {
+    height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(assets/images/wp.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.login-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-username, .login-password, .login-submit {
+    display: flex;
+    width: 70%;
+    height: 40px;
+    margin: 20px 0;
+}
+
+.login-remember{
+    display: block;
+    width: 70%;
+    align-self: left;
+    margin-top: 10px;
+}
+
+.login-remember label, #rememberme {
+    cursor: pointer;
+}
+
+
+.input {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.login-submit {
+    height: 35px !important;
+    width: 50% !important;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #18374B;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color:transparent;
+    border: 2px solid #18374B;
+    color: #18374B;
+}
+
+#loginform {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    background-color:#0F6298;
+    height: 20em;
+    border-radius: 20px;
+    color: white;
+}
+
+#loginform p{
+    display: block;
+}
+
+#loginform p label {
+    display: block;
+    padding-left: 10px;
+}
+
+#loginform .login-remember label {
+    display: block;
+    float: left;
+}
+
+
+
+
+/* CONTENT ANIME */
+.content {
+    width: 100%;
+    padding: 30px 17%;
+    display: block;
+}
+
+.anime-card a {
+    text-decoration: none;
+}
+
+.anime-card {
+    transition: .3s;
+}
+
+.anime-info h2 {
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color:black;
+}
+
+.anime-info p {
+    font-size: 0.8rem;
+    color: rgb(107, 107, 107);
+}
+
+.thumbnail {
+    width: 200px;
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.anime-card:hover{
+    filter: brightness(50%);
+}
+
+.content h1 {
+    padding-bottom: 20px;
+}
+
+.anime-list {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px;
+    background-color:#004879;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .back-to-top-btn:hover {
+    background-color: #555;
+  }
+
+
+  .all-anime {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    position:relative;
+  }
+
+  .all-anime .content {
+    width: 80vw;
+    padding: 10px;
+  }
+
+  .all-anime .content .anime-list {
+    width: 100%;
+  }
+
+  .all-anime aside {
+    width: 20vw;
+    padding: 10px;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+  }
+
+  .all-anime aside h2 {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+  }
+
+  aside form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  aside form button {
+    padding: 10px 20px;
+    background-color: #0F6298;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  aside form button:hover {
+      background-color: #004879;
+    }
+
+
+
+
+
+/* ANIME DETAIL */
+.anime-detail {
+    padding: 20px;
+    width: 100%;
+}
+
+
+.keterangan {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    border-radius: 10px;
+}
+
+.keterangan img {
+    width: 250px;
+}
+
+.keterangan .keterangan-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.anime-detail .sinopsis {
+    padding: 10px;
+}
+
+.anime-detail .sinopsis p {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+
+/* EPISODE */
+
+.episode {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.episode h1 {
+    padding-bottom: 10px;
+}
+
+.single-episode {
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.single-episode h3 {
+    width: 100%;
+    height: 100%;
+}
+
+.single-episode h3 a {
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-episode :hover {
+    background-color: #0F6298;
+    color: white;
+}
+
+
+/* STAR RATING */
+.average-rating {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    align-items: center;
+    gap: 5px;
+}
+
+.star-rating {
+    height: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.average-rating p {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    font-size: 1rem;
+  }
+  
+  .star {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .star:hover {
+    color: rgb(255, 247, 199);
+  }
+  
+  .star-filled {
+    color: gold;
+  }
+
+
+
+/* DETAIL EPISODE */
+.detail-episode {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* GO BACK BUTTON */
+.go-back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#0F6298;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    width: fit-content;
+  }
+
+  .go-back-button:hover {
+    background-color: #004879;
+  }
+
+
+
+
+/* GALLERY */
+.gallery {
+    padding: 10px;
+    margin: 50px auto;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.gallery h1{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    display: flex;
+    width: 300px;
+}
+
+
+
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #0F6298;
+    color: white;
+    height: 90px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .sosmed {
+    display: flex;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+footer .sosmed ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .sosmed ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all .5s;
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+
+
+@media (max-width: 767px) {
+    .navbar {
+        font-size: 0.7rem;
+        width: 85%;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero img {
+        height: 100%;
+    }
+
+    .hero .judul {
+        width: 100vw;
+    }
+
+    .isi-judul {
+        width: 50%;
+    }
+
+    .isi-judul h1 {
+        font-size: 2rem;
+    }
+    .isi-judul p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 300px;
+    }
+
+    .hero img {
+        height: 100%;
+    }
+
+    .hero .judul {
+        width: 100vw;
+    }
+
+    .isi-judul {
+        width: 50%;
+    }
+
+    .isi-judul h1 {
+        font-size: 2rem;
+    }
+
+    .isi-judul p {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        width: 100vw;
+        padding: 20px 0;
+    }
+
+    .content h1 {
+        text-align: center;
+    }
+    
+    .content .anime-list {
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .navbar {
+        height: 100%;
+    }
+    .navbar ul {
+        margin-top: 50px;
+        right: 0;
+        position: absolute;
+        height: 80vh;
+        width: 50%;
+        background-color: #0F6298;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: all 1s;
+        z-index: 999;
+    }
+
+    .navbar .sub-menu {
+        width: 100%;
+    }
+
+    .navbar ul.slide {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
